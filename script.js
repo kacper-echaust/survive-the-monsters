@@ -9,10 +9,24 @@ const config = {
 	},
 }
 
-const game = new Phaser.game(config)
+let game = new Phaser.Game(config)
 
-const preload = () => {}
+function preload() {
+	this.load.image('background', '/assets/background.jpg')
+	this.load.spritesheet('hero', 'assets/hero.png', {
+		frameWidth: 100,
+		frameHeight: 150,
+	})
+	this.load.spritesheet('zombie', 'assets/zombie.png', {
+		frameWidth: 100,
+		frameHeight: 150,
+	})
+}
 
-const create = () => {}
+function create() {
+	this.add.image(400, 300, 'background')
+	this.hero = this.add.sprite(100, 400, 'hero')
+	this.zombie = this.add.sprite(200, 400, 'zombie')
+}
 
-const update = () => {}
+function update() {}
