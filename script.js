@@ -34,7 +34,7 @@ function preload() {
 }
 
 function create() {
-	zombie = this.add.sprite(200, 400, 'zombie')
+	// zombie = this.add.sprite(200, 400, 'zombie')
 
 	this.anims.create({
 		key: 'left',
